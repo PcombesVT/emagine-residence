@@ -1,0 +1,12 @@
+# robots.txt — emagine-residence.fr
+# Résidence étudiante E-Magine, Isle (87170)
+# Gestion : Elyade (29 rue Jean Monnet, 31240 Saint-Jean) | Location : Begip Limoges
+
+User-agent: *
+Allow: /
+
+# Exclure la page mentions légales de l'indexation (déjà gérée via meta robots noindex)
+Disallow: /mentions-legales.html
+
+# Sitemap
+Sitemap: https://emagine-residence.fr/sitemap.xml
