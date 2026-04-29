@@ -776,8 +776,8 @@ form.addEventListener('submit', function() {
     btn.style.opacity = '.7';
 
     // ── Double envoi vers Google Sheets ──
-    const APPS_SCRIPT_URL = 'COLLER_ICI_URL_APPS_SCRIPT';
-    if (APPS_SCRIPT_URL !== 'COLLER_ICI_URL_APPS_SCRIPT') {
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec';
+    if (APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec') {
       fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         body: new FormData(form)
