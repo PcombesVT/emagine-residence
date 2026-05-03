@@ -117,6 +117,57 @@
         html { scroll-behavior:smooth; font-size:16px; }
         body { font-family:'DM Sans',sans-serif; color:var(--text-body); background:var(--cream); line-height:1.7; overflow-x:hidden; }
 
+        /* BANDEAU DÉFILANT */
+        .ticker-bar {
+          position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
+          background: var(--accent-teal);
+          height: 40px;
+          display: flex; align-items: center;
+          overflow: hidden;
+          border-bottom: 2px solid var(--accent-teal-light);
+        }
+        .ticker-track {
+          display: flex;
+          width: max-content;
+          animation: ticker-scroll 28s linear infinite;
+        }
+        .ticker-track:hover { animation-play-state: paused; }
+        .ticker-item {
+          white-space: nowrap;
+          padding: 0 60px;
+          font-size: .82rem;
+          font-weight: 600;
+          color: var(--white);
+          letter-spacing: .04em;
+          text-transform: uppercase;
+        }
+        .ticker-item .ticker-dot {
+          display: inline-block;
+          width: 6px; height: 6px;
+          background: rgba(255,255,255,.6);
+          border-radius: 50%;
+          margin: 0 28px;
+          vertical-align: middle;
+        }
+        .ticker-item a {
+          color: var(--deep-blue);
+          text-decoration: none;
+          font-weight: 700;
+          background: rgba(255,255,255,.2);
+          padding: 2px 10px;
+          border-radius: 20px;
+          margin-left: 8px;
+          transition: background .2s;
+        }
+        .ticker-item a:hover { background: rgba(255,255,255,.35); }
+        @keyframes ticker-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        /* Décaler la navbar sous le bandeau */
+        .navbar { top: 40px; }
+
         /* NAV */
         .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 2rem; transition:all .4s; background:transparent; }
         .navbar.scrolled { background:rgba(255,255,255,.95); backdrop-filter:blur(20px); box-shadow:var(--shadow-sm); }
@@ -143,7 +194,7 @@
         .hero-bg { position:absolute; inset:0; background:linear-gradient(135deg,var(--deep-blue) 0%,var(--medium-blue) 50%,#1a5276 100%); }
         .hero-bg::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(19,168,158,.15),transparent),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(232,99,74,.08),transparent); }
         .hero-pattern { position:absolute; inset:0; opacity:.04; background-image:radial-gradient(circle at 25% 25%,white 1px,transparent 1px),radial-gradient(circle at 75% 75%,white 1px,transparent 1px); background-size:60px 60px; }
-        .hero-content { position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:8rem 2rem 4rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+        .hero-content { position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:9.5rem 2rem 4rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
         .hero-text { max-width:600px; }
         .hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(19,168,158,.15); border:1px solid rgba(19,168,158,.3); padding:.4rem 1rem; border-radius:50px; font-size:.8rem; font-weight:600; color:var(--accent-teal-light); margin-bottom:1.5rem; letter-spacing:.05em; text-transform:uppercase; }
         .hero-badge::before { content:''; width:8px; height:8px; background:var(--accent-teal-light); border-radius:50%; animation:pulse-dot 2s ease-in-out infinite; }
@@ -334,6 +385,15 @@
     </style>
 </head>
 <body>
+
+<!-- BANDEAU DÉFILANT -->
+<div class="ticker-bar" role="marquee" aria-label="Annonces disponibilités E-Magine">
+  <div class="ticker-track">
+    <!-- Bloc répété 2 fois pour boucle infinie -->
+    <span class="ticker-item">🏠 Studios immédiatement disponibles à la location<span class="ticker-dot"></span>Résidence E-Magine — Isle (87)<span class="ticker-dot"></span>Dès 360 €/mois CC<span class="ticker-dot"></span>WiFi &amp; Parking inclus<span class="ticker-dot"></span>Éligible ALS<span class="ticker-dot"></span><a href="#contact">Contacter Begip →</a></span>
+    <span class="ticker-item">🏠 Studios immédiatement disponibles à la location<span class="ticker-dot"></span>Résidence E-Magine — Isle (87)<span class="ticker-dot"></span>Dès 360 €/mois CC<span class="ticker-dot"></span>WiFi &amp; Parking inclus<span class="ticker-dot"></span>Éligible ALS<span class="ticker-dot"></span><a href="#contact">Contacter Begip →</a></span>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav class="navbar" id="navbar">
@@ -614,7 +674,11 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
     <div class="section-container">
-        <div class="success-msg" id="successMsg">✓ Merci ! Votre demande a bien été envoyée. L'équipe Begip vous recontactera rapidement.</div>
+        <div class="success-msg" id="successMsg">
+          <strong>✓ Votre demande a bien été envoyée !</strong><br>
+          L'équipe Begip vous recontactera dans les meilleurs délais, du lundi au vendredi de 8h30 à 18h00.<br>
+          Pour toute urgence : <a href="tel:0555339750" style="color:var(--accent-teal); font-weight:600;">05 55 33 97 50</a> — <a href="mailto:agence@begip.fr" style="color:var(--accent-teal);">agence@begip.fr</a>
+        </div>
         <div class="section-header reveal">
             <span class="section-tag">Contact</span>
             <h2 class="section-title">Parlons de votre logement</h2>
@@ -770,19 +834,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // Form
 const form = document.getElementById('contactForm');
-form.addEventListener('submit', function() {
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
     const btn = form.querySelector('.form-submit');
     btn.textContent = 'Envoi en cours...';
     btn.style.opacity = '.7';
 
-    // ── Double envoi vers Google Sheets ──
+    const formData = new FormData(form);
+    const encoded = new URLSearchParams(formData).toString();
+
+    // Envoi Formspree
+    fetch('https://formspree.io/f/xlgagzpy', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encoded
+    }).catch(() => {});
+
+    // Envoi Google Sheets
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec';
-    const encoded = new URLSearchParams(new FormData(form)).toString();
     fetch(APPS_SCRIPT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encoded
     }).catch(() => {});
+
+    // Afficher confirmation
+    form.style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
 });
 if (window.location.hash === '#merci') {
     document.getElementById('successMsg').classList.add('show');
