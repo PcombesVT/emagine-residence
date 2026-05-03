@@ -165,11 +165,10 @@
           100% { transform: translateX(-50%); }
         }
 
-        /* Décaler la navbar sous le bandeau */
-        .navbar { top: 40px; }
+        /* Décaler la navbar sous le bandeau (réglé directement dans .navbar plus bas) */
 
         /* NAV */
-        .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 2rem; transition:all .4s; background:transparent; }
+        .navbar { position:fixed; top:40px; left:0; right:0; z-index:1000; padding:0 2rem; transition:all .4s; background:transparent; }
         .navbar.scrolled { background:rgba(255,255,255,.95); backdrop-filter:blur(20px); box-shadow:var(--shadow-sm); }
         .navbar-inner { max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:72px; }
         .logo { display:flex; align-items:center; gap:.5rem; text-decoration:none; }
