@@ -3,7 +3,7 @@
 
   <!-- Page principale -->
   <url>
-    <loc>https://emagine-residence.fr/</loc>
+    <loc>https://www.emagine-residence.fr/</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Formations santé proches (campus Marcland) -->
   <url>
-    <loc>https://emagine-residence.fr/formations-sante-emagine.html</loc>
+    <loc>https://www.emagine-residence.fr/formations-sante-emagine.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Vie étudiante à Isle -->
   <url>
-    <loc>https://emagine-residence.fr/vie-etudiante-isle-limoges.html</loc>
+    <loc>https://www.emagine-residence.fr/vie-etudiante-isle-limoges.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Distances campus -->
   <url>
-    <loc>https://emagine-residence.fr/distances-emagine-limoges.html</loc>
+    <loc>https://www.emagine-residence.fr/distances-emagine-limoges.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
   <!-- FAQ -->
   <url>
-    <loc>https://emagine-residence.fr/faq-emagine.html</loc>
+    <loc>https://www.emagine-residence.fr/faq-emagine.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,7 +43,7 @@
 
   <!-- Mentions légales -->
   <url>
-    <loc>https://emagine-residence.fr/mentions-legales.html</loc>
+    <loc>https://www.emagine-residence.fr/mentions-legales.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
