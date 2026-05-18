@@ -48,13 +48,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Mentions légales -->
-  <url>
-    <loc>https://www.emagine-residence.fr/mentions-legales.html</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
