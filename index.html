@@ -774,6 +774,17 @@ form.addEventListener('submit', function() {
     const btn = form.querySelector('.form-submit');
     btn.textContent = 'Envoi en cours...';
     btn.style.opacity = '.7';
+
+    // Envoi parallèle vers le Google Sheet (tableau de suivi Begip)
+    try {
+        const encoded = new URLSearchParams(new FormData(form)).toString();
+        fetch('https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encoded,
+            keepalive: true
+        }).catch(function(){});
+    } catch (e) {}
 });
 if (window.location.hash === '#merci') {
     document.getElementById('successMsg').classList.add('show');
