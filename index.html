@@ -144,10 +144,11 @@
         .hero-bg::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(19,168,158,.15),transparent),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(232,99,74,.08),transparent); }
         .hero-pattern { position:absolute; inset:0; opacity:.04; background-image:radial-gradient(circle at 25% 25%,white 1px,transparent 1px),radial-gradient(circle at 75% 75%,white 1px,transparent 1px); background-size:60px 60px; }
         /* ⚠️ BANDEAU DISPONIBILITÉS — à mettre à jour selon l'état de la résidence */
-        .hero-announce { position:absolute; top:72px; left:0; right:0; z-index:3; background:rgba(11,37,69,.55); backdrop-filter:blur(10px); border-top:1px solid rgba(27,197,186,.35); border-bottom:1px solid rgba(27,197,186,.35); color:rgba(255,255,255,.95); text-align:center; padding:.75rem 1.5rem; font-size:.95rem; font-weight:600; letter-spacing:.01em; }
-        .hero-announce .today-date { color:var(--accent-teal-light); font-weight:700; }
-        .hero-announce .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent-teal-light); margin-right:.5rem; vertical-align:middle; animation:pulse-dot 2s ease-in-out infinite; }
-        @media(max-width:768px){ .hero-announce { font-size:.82rem; padding:.6rem 1rem; top:72px; } }
+        @keyframes announce-pulse { 0%,42% { opacity:1; transform:translateY(0); } 58%,72% { opacity:0; transform:translateY(-8px); } 88%,100% { opacity:1; transform:translateY(0); } }
+        .hero-announce { position:absolute; top:72px; left:0; right:0; z-index:3; background:rgba(11,37,69,.6); backdrop-filter:blur(10px); border-top:1px solid rgba(27,197,186,.45); border-bottom:1px solid rgba(27,197,186,.45); color:#fff; text-align:center; padding:1.1rem 2rem; font-size:1.2rem; font-weight:700; letter-spacing:.01em; animation:announce-pulse 4.5s ease-in-out infinite; }
+        .hero-announce .today-date { color:var(--accent-teal-light); font-weight:800; }
+        .hero-announce .dot { display:inline-block; width:11px; height:11px; border-radius:50%; background:var(--accent-teal-light); margin-right:.6rem; vertical-align:middle; box-shadow:0 0 10px rgba(27,197,186,.8); }
+        @media(max-width:768px){ .hero-announce { font-size:1rem; padding:.9rem 1.1rem; top:72px; } }
         .hero-content { position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:8rem 2rem 4rem; display:grid; grid-template-columns:1fr 1.15fr; gap:4rem; align-items:center; }
         .hero-text { max-width:600px; }
         .hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(19,168,158,.15); border:1px solid rgba(19,168,158,.3); padding:.4rem 1rem; border-radius:50px; font-size:.8rem; font-weight:600; color:var(--accent-teal-light); margin-bottom:1.5rem; letter-spacing:.05em; text-transform:uppercase; }
