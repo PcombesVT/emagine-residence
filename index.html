@@ -9,6 +9,11 @@
     <link rel="canonical" href="https://www.emagine-residence.fr/">
     <meta name="google-site-verification" content="fdM3s30khUAAQ1mErpZz5nocbxneeMA3ss3q3_0kDM0" />
 
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://www.emagine-residence.fr/" />
+    <link rel="alternate" hreflang="en" href="https://www.emagine-residence.fr/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.emagine-residence.fr/" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="E-Magine — Résidence étudiante à Isle, proche Campus Marcland (CHU Limoges)">
     <meta property="og:description" content="193 logements et appartements équipés, dès 360 €/mois CC, à ~12 min à pied (moins de 5 min à vélo) du Campus Marcland (CHU, Fac de Médecine). Location par Begip Limoges, gestion Elyade.">
@@ -131,6 +136,15 @@
         .nav-links a:hover { color:var(--accent-teal-light); }
         .nav-cta { background:var(--accent-teal)!important; color:var(--white)!important; padding:.6rem 1.4rem; border-radius:50px; font-weight:600!important; transition:transform .2s,box-shadow .2s!important; }
         .nav-cta:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(19,168,158,.35); }
+        /* LANGUAGE SWITCH */
+        .lang-switch { display:flex; align-items:center; gap:.3rem; font-size:.82rem; font-weight:700; }
+        .lang-switch a { padding:.15rem .4rem; border-radius:5px; color:rgba(255,255,255,.6)!important; text-decoration:none; }
+        .navbar.scrolled .lang-switch a { color:var(--text-muted)!important; }
+        .lang-switch a.active { color:var(--white)!important; background:rgba(255,255,255,.18); }
+        .navbar.scrolled .lang-switch a.active { color:var(--deep-blue)!important; background:var(--border); }
+        .lang-switch a:hover { color:var(--accent-teal-light)!important; }
+        .lang-switch .sep { color:rgba(255,255,255,.3); }
+        .navbar.scrolled .lang-switch .sep { color:var(--border); }
         .mobile-toggle { display:none; background:none; border:none; cursor:pointer; width:32px; height:32px; position:relative; }
         .mobile-toggle span { display:block; width:24px; height:2px; background:var(--white); position:absolute; left:4px; transition:all .3s; }
         .navbar.scrolled .mobile-toggle span { background:var(--deep-blue); }
@@ -358,6 +372,7 @@
             <li><a href="residence-etudiante-fac-medecine-limoges">Fac de Médecine</a></li>
             <li><a href="formations-sante-emagine">Formations santé</a></li>
             <li><a href="distances-emagine-limoges">Distances</a></li>
+            <li class="lang-switch"><a href="/" class="active">FR</a><span class="sep">/</span><a href="/en/">EN</a></li>
             <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
         </ul>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
