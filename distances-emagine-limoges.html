@@ -11,6 +11,11 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://www.emagine-residence.fr/distances-emagine-limoges">
 
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://www.emagine-residence.fr/distances-emagine-limoges" />
+  <link rel="alternate" hreflang="en" href="https://www.emagine-residence.fr/en/distances-emagine-limoges" />
+  <link rel="alternate" hreflang="x-default" href="https://www.emagine-residence.fr/distances-emagine-limoges" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Distances E-Magine → Fac Médecine, CHU, Lettres, centre-ville Limoges">
   <meta property="og:description" content="13 min à pied jusqu'au CHU et à la Fac de Médecine, 1,1 km de la Fac des Lettres, 15 min du centre-ville. Découvrez la proximité unique de la résidence E-Magine à Isle.">
@@ -99,6 +104,11 @@
     .nav-links a.active { color:var(--accent-teal); font-weight:600; }
     .nav-cta { background:var(--accent-teal)!important; color:var(--white)!important; padding:.6rem 1.4rem; border-radius:50px; font-weight:600!important; }
     .nav-cta:hover { transform:translateY(-1px)!important; box-shadow:0 6px 20px rgba(19,168,158,.35)!important; }
+    .lang-switch{display:flex;align-items:center;gap:.25rem;font-size:.85rem;font-weight:700;}
+    .lang-switch a{color:var(--text-muted)!important;text-decoration:none;padding:.1rem .35rem;border-radius:5px;}
+    .lang-switch a.active{color:var(--deep-blue)!important;background:var(--cream);}
+    .lang-switch a:hover{color:var(--accent-teal)!important;}
+    .lang-switch .sep{color:var(--text-muted);}
     .mobile-toggle { display:none; background:none; border:none; cursor:pointer; width:32px; height:32px; position:relative; }
     .mobile-toggle span { display:block; width:24px; height:2px; background:var(--deep-blue); position:absolute; left:4px; transition:all .3s; }
     .mobile-toggle span:nth-child(1) { top:8px; }
@@ -256,6 +266,7 @@
       <li><a href="index.html#logements">Logements</a></li>
       <li><a href="formations-sante-emagine">Formations santé</a></li>
       <li><a href="distances-emagine-limoges" class="active">Distances</a></li>
+      <li class="lang-switch"><a href="/distances-emagine-limoges" class="active">FR</a><span class="sep">/</span><a href="/en/distances-emagine-limoges">EN</a></li>
       <li><a href="index.html#contact" class="nav-cta">Nous contacter</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -601,9 +612,9 @@
 <div class="cta-banner">
   <div class="cta-banner-inner reveal">
     <h2>Un emplacement idéal pour vos études</h2>
-    <p>Logements, appartements et studios équipés de 360 à 437 €/mois charges comprises, à quelques minutes à pied de vos lieux d'études. Éligibles à l'ALS (Allocation de Logement Sociale). Location assurée par <strong>Begip</strong> pour le compte d'<strong>Elyade</strong>.</p>
+    <p>Logements, appartements et studios équipés de 360 à 437 €/mois charges comprises, à quelques minutes à pied de vos lieux d'études. Éligibles à l'ALS (Allocation de Logement Sociale). Location assurée par <strong>Begip</strong> pour le compte d'<strong>Elyade</strong>. La résidence est actuellement complète — inscription possible sur liste d'attente.</p>
     <div class="cta-buttons">
-      <a href="index.html#contact" class="btn-white">Contacter Begip pour réserver</a>
+      <a href="index.html#contact" class="btn-white">Contacter Begip</a>
       <a href="formations-sante-emagine" class="btn-ghost">Voir les formations →</a>
     </div>
   </div>
