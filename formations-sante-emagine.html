@@ -11,6 +11,11 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://www.emagine-residence.fr/formations-sante-emagine">
 
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://www.emagine-residence.fr/formations-sante-emagine" />
+  <link rel="alternate" hreflang="en" href="https://www.emagine-residence.fr/en/formations-sante-emagine" />
+  <link rel="alternate" hreflang="x-default" href="https://www.emagine-residence.fr/formations-sante-emagine" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Logement étudiant proche Fac Médecine, Pharmacie, IFSI & Lettres — Résidence E-Magine Limoges">
   <meta property="og:description" content="À ~12 min à pied de la Fac de Médecine et du CHU, à 1,1 km de la Fac des Lettres : la résidence E-Magine est idéalement placée pour les étudiants en santé et en lettres.">
@@ -95,6 +100,11 @@
     .nav-links a.active { color:var(--accent-teal); font-weight:600; }
     .nav-cta { background:var(--accent-teal)!important; color:var(--white)!important; padding:.6rem 1.4rem; border-radius:50px; font-weight:600!important; transition:transform .2s,box-shadow .2s!important; }
     .nav-cta:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(19,168,158,.35); }
+    .lang-switch{display:flex;align-items:center;gap:.25rem;font-size:.85rem;font-weight:700;}
+    .lang-switch a{color:var(--text-muted)!important;text-decoration:none;padding:.1rem .35rem;border-radius:5px;}
+    .lang-switch a.active{color:var(--deep-blue)!important;background:var(--cream);}
+    .lang-switch a:hover{color:var(--accent-teal)!important;}
+    .lang-switch .sep{color:var(--text-muted);}
     .mobile-toggle { display:none; background:none; border:none; cursor:pointer; width:32px; height:32px; position:relative; }
     .mobile-toggle span { display:block; width:24px; height:2px; background:var(--deep-blue); position:absolute; left:4px; transition:all .3s; }
     .mobile-toggle span:nth-child(1) { top:8px; }
@@ -240,6 +250,7 @@
       <li><a href="index.html#logements">Logements</a></li>
       <li><a href="formations-sante-emagine" class="active">Formations santé</a></li>
       <li><a href="distances-emagine-limoges">Distances</a></li>
+      <li class="lang-switch"><a href="/formations-sante-emagine" class="active">FR</a><span class="sep">/</span><a href="/en/formations-sante-emagine">EN</a></li>
       <li><a href="index.html#contact" class="nav-cta">Nous contacter</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -397,11 +408,11 @@
           <span class="f-emoji">👨‍⚕️</span>
         </div>
         <div class="formation-card-body">
-          <p class="f-desc">Les internes en médecine, pharmacie et odontologie peuvent trouver à la résidence E-Magine un logement de proximité idéal pour leurs gardes et stages nocturnes. La résidence offre un parking privatif sécurisé, le wifi, et des studios fonctionnels permettant un repos de qualité entre deux journées intenses au CHU. La disponibilité à l'année (hors résidence CROUS) est un atout majeur pour les internes.</p>
+          <p class="f-desc">Les internes en médecine, pharmacie et odontologie peuvent trouver à la résidence E-Magine un logement de proximité idéal pour leurs gardes et stages nocturnes. La résidence offre un parking privatif sécurisé, le wifi, et des studios fonctionnels permettant un repos de qualité entre deux journées intenses au CHU. La location à l'année (hors résidence CROUS) est un atout majeur pour les internes.</p>
           <div class="f-infos">
             <div class="f-info"><span class="f-info-icon">📍</span><span>CHU Dupuytren — stages tournants inter-services</span></div>
             <div class="f-info"><span class="f-info-icon">🎓</span><span>DES (Diplôme d'Études Spécialisées) · Clinicat · DESC</span></div>
-            <div class="f-info"><span class="f-info-icon">💡</span><span>Logement disponible à l'année, loyer tout compris dès 360 €/mois</span></div>
+            <div class="f-info"><span class="f-info-icon">💡</span><span>Location à l'année, loyer tout compris dès 360 €/mois</span></div>
           </div>
           <div class="f-distance">📍 ~13 min à pied depuis E-Magine</div>
         </div>
@@ -573,8 +584,8 @@
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <div class="cta-banner-inner reveal">
-    <h2>Prêt à réserver votre studio à E-Magine ?</h2>
-    <p>Logements, appartements et studios meublés d'environ 20 à 25 m², de 360 à 437 €/mois charges comprises. Éligibles à l'ALS (Allocation de Logement Sociale). Location assurée par <strong>Begip</strong>, agence immobilière à Limoges.</p>
+    <h2>Prêt à rejoindre la liste d'attente E-Magine ?</h2>
+    <p>Logements, appartements et studios meublés d'environ 20 à 25 m², de 360 à 437 €/mois charges comprises. Éligibles à l'ALS (Allocation de Logement Sociale). Location assurée par <strong>Begip</strong>, agence immobilière à Limoges. La résidence est actuellement complète — inscription possible sur liste d'attente.</p>
     <div class="cta-buttons">
       <a href="index.html#contact" class="btn-white">Contacter Begip</a>
       <a href="distances-emagine-limoges" class="btn-ghost">Voir les distances →</a>
