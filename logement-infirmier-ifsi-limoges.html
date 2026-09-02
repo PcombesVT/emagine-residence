@@ -11,6 +11,11 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://www.emagine-residence.fr/logement-infirmier-ifsi-limoges">
 
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://www.emagine-residence.fr/logement-infirmier-ifsi-limoges" />
+  <link rel="alternate" hreflang="en" href="https://www.emagine-residence.fr/en/logement-infirmier-ifsi-limoges" />
+  <link rel="alternate" hreflang="x-default" href="https://www.emagine-residence.fr/logement-infirmier-ifsi-limoges" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Logement étudiant IFSI Limoges — Studio à ~14 min de l'IFSI et ~13 min du CHU">
   <meta property="og:description" content="La résidence E-Magine à Isle est le logement idéal pour les étudiants en soins infirmiers : à ~14 min à pied de l'IFSI du CHU et à ~13 min des services hospitaliers de stage.">
@@ -70,7 +75,7 @@
         "name": "Peut-on louer un studio à E-Magine pour une seule année de formation infirmière ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Les baux sont des baux classiques (bail étudiant possible). La location est assurée par l'agence Begip à Limoges. Nous vous invitons à contacter directement Begip au 05 55 33 97 50 pour connaître les disponibilités et les modalités de location adaptées à votre situation."
+          "text": "Les baux sont des baux classiques (bail étudiant possible). La location est assurée par l'agence Begip à Limoges. Nous vous invitons à contacter directement Begip au 05 55 33 97 50 pour connaître les modalités de location adaptées à votre situation. La résidence peut être complète : demandez alors à être inscrit sur la liste d'attente."
         }
       }
     ]
@@ -142,6 +147,11 @@
     .nav-links a.active { color:var(--accent-teal); font-weight:600; }
     .nav-cta { background:var(--accent-teal)!important; color:var(--white)!important; padding:.6rem 1.4rem; border-radius:50px; font-weight:600!important; transition:transform .2s,box-shadow .2s!important; }
     .nav-cta:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(19,168,158,.35); }
+    .lang-switch{display:flex;align-items:center;gap:.25rem;font-size:.85rem;font-weight:700;}
+    .lang-switch a{color:var(--text-muted)!important;text-decoration:none;padding:.1rem .35rem;border-radius:5px;}
+    .lang-switch a.active{color:var(--deep-blue)!important;background:var(--cream);}
+    .lang-switch a:hover{color:var(--accent-teal)!important;}
+    .lang-switch .sep{color:var(--text-muted);}
     .mobile-toggle { display:none; background:none; border:none; cursor:pointer; width:32px; height:32px; position:relative; }
     .mobile-toggle span { display:block; width:24px; height:2px; background:var(--deep-blue); position:absolute; left:4px; transition:all .3s; }
     .mobile-toggle span:nth-child(1) { top:8px; }
@@ -304,6 +314,7 @@
       <li><a href="index.html#logements">Logements</a></li>
       <li><a href="formations-sante-emagine" class="active">Formations santé</a></li>
       <li><a href="distances-emagine-limoges">Distances</a></li>
+      <li class="lang-switch"><a href="/logement-infirmier-ifsi-limoges" class="active">FR</a><span class="sep">/</span><a href="/en/logement-infirmier-ifsi-limoges">EN</a></li>
       <li><a href="index.html#contact" class="nav-cta">Nous contacter</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -345,7 +356,7 @@
       </div>
       <div class="hero-stat">
         <div class="num">193</div>
-        <div class="lbl">Studios disponibles</div>
+        <div class="lbl">Studios équipés</div>
       </div>
     </div>
   </div>
@@ -607,7 +618,7 @@
           <span class="faq-chevron">▼</span>
         </div>
         <div class="faq-answer">
-          <div class="faq-answer-inner">La location est assurée par Begip, agence immobilière à Limoges. Vous pouvez les contacter par téléphone au <a href="tel:+33555339750" style="color:var(--accent-teal);font-weight:600;">05 55 33 97 50</a>, par email à <a href="mailto:agence@begip.fr" style="color:var(--accent-teal);">agence@begip.fr</a>, ou depuis le formulaire de contact de ce site. Nous vous conseillons de contacter Begip dès le mois de juin pour la rentrée de septembre, les disponibilités étant limitées.</div>
+          <div class="faq-answer-inner">La location est assurée par Begip, agence immobilière à Limoges. Vous pouvez les contacter par téléphone au <a href="tel:+33555339750" style="color:var(--accent-teal);font-weight:600;">05 55 33 97 50</a>, par email à <a href="mailto:agence@begip.fr" style="color:var(--accent-teal);">agence@begip.fr</a>, ou depuis le formulaire de contact de ce site. La résidence peut être complète : demandez alors à être inscrit sur la liste d'attente. Nous vous conseillons de contacter Begip dès le mois de juin pour la rentrée de septembre.</div>
         </div>
       </div>
     </div>
@@ -623,8 +634,8 @@
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <div class="cta-banner-inner reveal">
-    <h2>Réservez votre studio pour votre DEI à Limoges</h2>
-    <p>Studios meublés dès 360 €/mois charges comprises, à ~14 min à pied de l'IFSI et ~13 min du CHU Dupuytren. Éligibles à l'ALS. Location assurée par <strong>Begip</strong>, agence immobilière à Limoges.</p>
+    <h2>Liste d'attente E-Magine pour votre DEI à Limoges</h2>
+    <p>Studios meublés dès 360 €/mois charges comprises, à ~14 min à pied de l'IFSI et ~13 min du CHU Dupuytren. Éligibles à l'ALS. Location assurée par <strong>Begip</strong>, agence immobilière à Limoges. La résidence est actuellement complète — inscription possible sur liste d'attente.</p>
     <div class="cta-buttons">
       <a href="index.html#contact" class="btn-white">Contacter Begip</a>
       <a href="formations-sante-emagine" class="btn-ghost">Toutes les formations santé →</a>
