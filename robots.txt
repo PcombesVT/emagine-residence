@@ -9,4 +9,4 @@ Allow: /
 Disallow: /mentions-legales.html
 
 # Sitemap
-Sitemap: https://emagine-residence.fr/sitemap.xml
+Sitemap: https://www.emagine-residence.fr/sitemap.xml
